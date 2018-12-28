@@ -1,14 +1,19 @@
 {
-  "name": "myapp",
+  "name": "group-02",
   "version": "1.0.0",
-  "description": "",
-  "main": "myapp.js",
+  "description": "Our first web app.",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.ewi.tudelft.nl:TI3125TU/2018-2019/TI3125TU-group-02/group-02.git"
+  },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4"
-  }
+  "license": "ISC"
 }
