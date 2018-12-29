@@ -5,8 +5,11 @@
  * This code will no be visible to the user.
  * @type {*|createApplication}
  */
-const express = require('express'); //Imports
-const path = require('path'); //Imports
+
+ //Imports
+const express = require('express');
+const path = require('path');
+const routes = require('./routes');
 
 // Initialize app
 const app = express();
@@ -16,6 +19,9 @@ const app = express();
  * Hence the name "public", public for the world to see.
  */
 app.use(express.static(path.join(__dirname, '/public')));
+
+//  Connect all our routes to our application
+app.use('/', routes);
 
 /**
  * Creating your local server. To run your local server: open a terminal or cmd
