@@ -14,6 +14,9 @@ const routes = require('./routes');
 // Initialize app
 const app = express();
 
+//Load view engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 /**
  * Middleware, This is where you should be adding your HTML, CSS, JavaScript files
  * Hence the name "public", public for the world to see.
@@ -21,7 +24,11 @@ const app = express();
 app.use(express.static(path.join(__dirname, '/public')));
 
 //  Connect all our routes to our application
-app.use('/', routes);
+//app.use('/', routes);
+
+app.get('/', (req, res) => {
+    res.render('index');
+});
 
 /**
  * Creating your local server. To run your local server: open a terminal or cmd
