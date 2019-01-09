@@ -8,9 +8,9 @@ router.get('/', function(req, res) {
 });
 
 /* GET home page of a specific user. */
-router.get('/home', function(req, res) {
-    res.render('home', { title: 'Express' });
-    console.log('A User connected to its homepage.');
+router.get('/dashboard', function(req, res) {
+    res.render('dashboard', { title: 'Express' });
+    console.log('A User connected to his personal dashboard.');
 });
 
 /* GET Userlist page. */
