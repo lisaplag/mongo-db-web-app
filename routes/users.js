@@ -13,11 +13,6 @@ router.get('/login', function(req, res) {
   console.log('A User connected to the login page.');
 });
 
-/* GET New User page. */
-router.get('/newuser', function(req, res) {
-  res.render('newuser', { title: 'Add New User' });
-});
-
 /* GET home page of a specific user. */
 router.get('/dashboard', function(req, res) {
   res.render('dashboard', { title: 'Express' });
