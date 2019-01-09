@@ -14,6 +14,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
+app.use(expressLayouts);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -36,16 +37,6 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-
-/**
- * Creating your local server. To run your local server: open a terminal or cmd
- * and go to the directory where this app.js is located and type "npm start" afterwards press enter.
- * If you open up any browser and type localhost:3001 or 127.0.0.1:3001
- * You'll be greeted with a "Hello World!"
- */
-app.listen('3001', '127.0.0.1', () => {
-  console.log('Server started on port 3001...');
 });
 
 module.exports = app;
