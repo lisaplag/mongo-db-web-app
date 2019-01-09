@@ -1,50 +1,8 @@
 body {
-    font-family: verdana;
-    background-color: whitesmoke;
-    }
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
 
-header {
-    position:relative;
-    padding-left: 30px;
-    background-color: #00A6D6;
-    font-size: 30px;
-    color: #FFFFFF;
-    }
-
-h1 {padding-left: 30px;}
-
-
-/* Add a black background color to the top navigation */
-.topnav {
-    margin: 0 0 0 0;
-    position: relative;
-    list-style-type: none;
-    float: right;
-    background-color: #00A6D6;
-    overflow: hidden;
-  }
-
-  .topnav li {
-    float: left;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    color: whitesmoke;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    font-weight: bold;
-    color: black;
-  }
+a {
+  color: #00B7FF;
+}

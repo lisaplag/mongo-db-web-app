@@ -1,33 +1,11 @@
-﻿<!-- views/index.ejs -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <!-- <meta charset="utf-8"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-    <!-- Your custom CSS -->
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <title>TUtube</title>
-</head>
-    <body>
-        <header>
-            TUtube         
-            <ul class="topnav">
-                <li><a class="active" href="">Home</a></li>
-                <li><a href="users">Users</a></li>
-                <li><a href="#playlists">My Playlists</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li style="float:right"><a href="#logout">Logout</a></li>
-            </ul>
-        </header>
-        <h1>Welcome to TUtube!</h1>
-        <!-- Your custom JS -->
-        <script src="./javascripts/index.js"></script>
-        <form action="/url-where-we-want-to-submit-form-data">
-            <input type="text" placeholder="Search">
-            <button type="submit">Go!</button>
-          </form>
-          <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-    </body>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
 </html>
-
