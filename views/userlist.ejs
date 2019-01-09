@@ -1,0 +1,25 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>TUtube</title>
+</head>
+    <body>
+        <header>
+            TUtube         
+        </header>
+
+        <h1>User List</h1>
+        <script type="text/x-ejs-template">
+          <% for(var i=0; i<userlist.length; i++) { %>
+            Hello <%= userlist[i].username %>
+          <% } %>
+        </script>
+
+    </body>
+</html>
