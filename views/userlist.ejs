@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Employee List</title>
+    <title>User List</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <div class="container">
-      <h3><a href="/employees/create">Create User</a></h3>
       <h1>User List</h1>
       <% if(userlist.length>0) { %>
       <table class="list-table">
@@ -31,5 +30,6 @@
         <div>No users found.</div>
       <% } %>
     </div>
+    <h4><a href="/register">Create new user</a></h3>
   </body>
 </html>
