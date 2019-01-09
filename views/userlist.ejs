@@ -1,25 +1,35 @@
-<!-- views/index.ejs -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <!-- <meta charset="utf-8"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-    <!-- Your custom CSS -->
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <title>TUtube</title>
-</head>
-    <body>
-        <header>
-            TUtube         
-        </header>
-
-        <h1>User List</h1>
-        <script type="text/x-ejs-template">
-          <% for(var i=0; i<userlist.length; i++) { %>
-            Hello <%= userlist[i].username %>
+<html>
+  <head>
+    <title>Employee List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees/create">Create User</a></h3>
+      <h1>User List</h1>
+      <% if(userlist.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Surname</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<userlist.length;i++) { %>
+            <tr>
+              <td><a href="/login"><%= userlist[i].username%></a></td>
+              <td><%= userlist[i].firstname%></td>
+              <td><%= userlist[i].lastname%></td>
+            </tr>
           <% } %>
-        </script>
-
-    </body>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No users found.</div>
+      <% } %>
+    </div>
+  </body>
 </html>
