@@ -20,83 +20,97 @@
             </ul>
         </header>
         <h1>Register here!</h1>
+        <div class="container">
         <form action="/register" method="POST">
-          <div class="form-group">
-            <label for="firstname">First Name</label>
-            <input
-              type="firstname"
-              id="firstname"
-              name="firstname"
-              class="form-control"
-              placeholder="Enter First Name"
-              value="<%= typeof firstname != 'undefined' ? firstname : '' %>"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="lastname">Last Name</label>
-            <input
-              type="lastname"
-              id="lastname"
-              name="lastname"
-              class="form-control"
-              placeholder="Enter Last Name"
-              value="<%= typeof lastname != 'undefined' ? lastname : '' %>"
-              required
-            />
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input
-              type="username"
-              id="username"
-              name="username"
-              class="form-control"
-              placeholder="Enter Username"
-              value="<%= typeof username != 'undefined' ? username : '' %>"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="form-control"
-              placeholder="Enter Email"
-              value="<%= typeof email != 'undefined' ? email : '' %>"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="form-control"
-              placeholder="Create Password"
-              value="<%= typeof password != 'undefined' ? password : '' %>"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="password2">Confirm Password</label>
-            <input
-              type="password"
-              id="password2"
-              name="password2"
-              class="form-control"
-              placeholder="Confirm Password"
-              value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">
+          <table class="list-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <div class="form-group">
+                        <td><label for="firstname">First Name:</label></td>
+                        <td><input
+                        type="firstname"
+                        id="firstname"
+                        name="firstname"
+                        class="form-control"
+                        placeholder="Enter First Name"
+                        value="<%= typeof firstname != 'undefined' ? firstname : '' %>"
+                        required
+                      /></td>
+                        </div>
+                  </tr>
+                  
+                  <tr>
+                    <div class="form-group">
+                        <td><label for="lastname">Last Name:</label></td>
+                        <td><input
+                        type="lastname"
+                        id="lastname"
+                        name="lastname"
+                        class="form-control"
+                        placeholder="Enter Last Name"
+                        value="<%= typeof lastname != 'undefined' ? lastname : '' %>"
+                        required
+                      /></td>
+                    </div>
+                  </tr>
+                    <tr>
+                    <div class="form-group">
+                        <td><label for="username">Username:</label></td>
+                        <td><input
+                        type="username"
+                        id="username"
+                        name="username"
+                        class="form-control"
+                        placeholder="Enter Username"
+                        value="<%= typeof username != 'undefined' ? username : '' %>"
+                        required
+                      /></td>
+                    </div>
+                  </tr>
+
+                  <tr>
+                      <div class="form-group">
+                          <td><label for="email">Email:</label></td>
+                          <td><input
+                          type="email"
+                          id="email"
+                          name="email"
+                          class="form-control"
+                          placeholder="Enter Email"
+                          value="<%= typeof email != 'undefined' ? email : '' %>"
+                          required
+                        /></td>
+                      </div>
+                    </tr>
+
+                    <tr>
+                      <div class="form-group">
+                          <td><label for="password">Password:</label></td>
+                          <td><input
+                          type="password"
+                          id="password"
+                          name="password"
+                          class="form-control"
+                          placeholder="Create Password"
+                          value="<%= typeof password != 'undefined' ? password : '' %>"
+                          required
+                        /></td>
+                      </div>
+                     </tr>
+                    </tbody>
+                  </table>
+          <button type="submit">
             Register
           </button>
         </form>
-        <p class="lead mt-4">Have An Account? <a href="/login">Login</a></p>
+        <p>Have An Account? <a href="/login">Login</a></p>
+      </div>
     </body>
 </html>
 

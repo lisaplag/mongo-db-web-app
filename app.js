@@ -9,8 +9,8 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/group-02');
 
-var indexRouter = require('./routes/index.js');
-var usersRouter = require('./routes/users.js');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
 var app = express();
 
