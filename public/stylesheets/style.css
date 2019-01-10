@@ -60,7 +60,7 @@ input {
 
 
 #myInput {
-  background-image: url('./images/searchicon.jpg'); /* Add a search icon to input */
+  background-image: url('/images/searchicon.jpg'); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
   width: 30%; /* Full-width */
@@ -81,7 +81,6 @@ input {
 
 #myUL li a {
   float: left;
-  border: 1px solid #ddd; /* Add a border to all links */
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6; /* Grey background color */
   padding: 12px; /* Add some padding */
@@ -100,7 +99,7 @@ input {
 }
 
 #myUL li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
+  background-color: #00A6D6; /* Add a hover effect to all links, except for headers */
 }
 
 #myUL li #caption {
