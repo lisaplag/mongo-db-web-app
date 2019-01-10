@@ -102,6 +102,11 @@ router.get('/userlogin', function (req, res) {
   router.get('/dashboard', function(req, res) {
     res.render('dashboard', { title: 'Express' });
     console.log('A User connected to his personal dashboard.');
-  });
+});
+
+router.get('/contact', function (req, res) {
+    res.render('contact', { title: 'Contact' });
+    console.log('A User connected to the contact page.');
+});
 
 module.exports = router;
