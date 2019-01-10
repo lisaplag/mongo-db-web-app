@@ -99,12 +99,12 @@ router.post('/login', function (req, res) {
     var collection = db.get('usercollection');
 
     // Submit to the DB
-    collection.findOne({ "username": username, "password": inputpassword }).then(function (password, err) {
+    collection.findOne({ "username": username, "password": inputpassword }).then(function (err, password) {
         if (err) {
-            return console.log(err);
+            return res.redirect("dashboard");
         }
         else {
-            return res.redirect("dashboard");
+            return res.redirect("login#failed")
         }
     })
 });
