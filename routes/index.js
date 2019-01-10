@@ -92,26 +92,14 @@ router.post('/login', function (req, res) {
     var collection = db.get('usercollection');
 
     // Submit to the DB
-    var password = collection.findOne({ "username": username }).then(function (err, password) {
+    collection.findOne({ "username": username, "password": inputpassword }).then(function (password, err) {
         if (err) {
             return console.log(err);
         }
-        return password;
+        else {
+            return res.redirect("dashboard");
+        }
     })
- 
-    console.log(password)
-    console.log(inputpassword)
-      
-    if (password = null) {
-        res.send("The username is not in our database")
-    }
-    else if (inputpassword != password) {
-        res.send("Incorrect Password")
-    }
-    else {
-        res.redirect("dashboard");
-    }
-
 });
   
   /* GET home page of a specific user. */
