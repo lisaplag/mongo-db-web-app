@@ -13,25 +13,37 @@
         <header>
             TUtube         
             <ul class="topnav">
-                <li><a class="active" href="">Home</a></li>
-                <li><a href="/userlist">Users</a></li>
-                <li><a href="#playlists">My Playlists</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li style="float:right"><a href="#logout">Logout</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                <li style="float:right"><a href="/help">Help</a></li>
             </ul>
         </header>
         <h1>Log in here!</h1>
-        <!-- Your custom JS -->
-        <script src="javascripts/users.js"></script>
-        <form action="/userlogin">
-            <input type="text" placeholder="Username">
-            <!-- <input type="text" placeholder="First name">
-            <input type="text" placeholder="Last name">
-            <input type="text" placeholder="Email"> -->
-            <input type="text" placeholder="Password">            
-            <button type="submit">Go!</button>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                    <input
+                      type="username"
+                      id="username"
+                      name="username"
+                      class="form-control"
+                      placeholder="Enter Username"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      class="form-control"
+                      placeholder="Enter Password"
+                      requiredgit 
+                    />
+                  </div>          
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
           </form>
-          <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+          <p>No Account? <a href="/register">Register</a></p>
     </body>
 </html>
 

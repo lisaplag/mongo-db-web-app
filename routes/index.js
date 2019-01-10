@@ -26,7 +26,7 @@ router.get('/register', function(req, res) {
 });
 
 /* POST register page. */
-router.post('/registeruser', function (req, res) {
+router.post('/register', function (req, res) {
 
     // Set our internal DB variable
     var db = req.db;
@@ -59,15 +59,16 @@ router.post('/registeruser', function (req, res) {
         }
     });
 });
-  
-  /* GET login page. */
-  router.get('/login', function(req, res) {
+
+/* GET login page. */
+router.get('/login', function (req, res) {
     res.render('login', { title: 'Express' });
     console.log('A User connected to the login page.');
 });
 
+
 /* GET login page. */
-router.get('/userlogin', function (req, res) {
+router.post('/login', function (req, res) {
 
     // Set our internal DB variable
     var db = req.db;
@@ -83,7 +84,7 @@ router.get('/userlogin', function (req, res) {
     var collection = db.get('usercollection');
 
     // Submit to the DB
-    var password = collection.find({ "username": username }, { "password": 1, "_id": 0 });
+    var password = collection.find({ "username": username }, { "password": 1, "_id": 0 }).password;
     console.log("password:");
     console.log(password);
     if (password = null) {

@@ -4,8 +4,9 @@ body {
   }
 
 header {
-  position:relative;
   padding-left: 30px;
+  padding-bottom: 15px;
+  position: relative;
   background-color: #00A6D6;
   font-size: 30px;
   color: #FFFFFF;
@@ -29,10 +30,8 @@ header {
 /* Style the links inside the navigation bar */
 .topnav a {
   color: whitesmoke;
-  text-align: center;
-  padding: 14px 16px;
+  padding: 14px 14px;
   text-decoration: none;
-  display: block;
   font-size: 17px;
 }
 
