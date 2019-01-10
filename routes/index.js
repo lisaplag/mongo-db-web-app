@@ -84,9 +84,11 @@ router.post('/login', function (req, res) {
     var collection = db.get('usercollection');
 
     // Submit to the DB
-    var password = collection.find({ "username": username }, { "password": 1, "_id": 0 }).password;
-    console.log("password:");
-    console.log(password);
+    var password = collection.findOne({ "username": username }).password
+ 
+    console.log(password)
+    console.log(inputpassword)
+      
     if (password = null) {
         res.send("The username is not in our database")
     }
