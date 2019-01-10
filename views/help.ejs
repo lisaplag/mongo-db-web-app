@@ -1,18 +1,29 @@
-<div class="signup">
-      <div>
-          <h3>Sign Up</h3>
-          <div>
-              <form action="/" method="post">
-                  <input type="text" name="email" placeholder="Email..." required="">
-                  <br><br>
-                  <input type="text" name="username" placeholder="Username..." required="">
-                  <br><br>
-                  <input type="password" name="password" placeholder="Password..." required="">
-                  <br><br>
-                  <input type="password" name="passwordConf" placeholder="Confirm Password..." required="">
-                  <br><br>
-                  <input type="submit" value="Register Here!">
-              </form>
-          </div>
-      </div>
-  </div>
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>TUtube</title>
+</head>
+    <body>
+        <header>
+            TUtube         
+            <ul class="topnav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a class="active" href="">Help</a></li>
+            </ul>
+        </header>
+        <h1>Help Page</h1>
+        <div class="container">
+            <p>Lisa Plag - <a href= "mailto:lplag@student.tudelft.nl">lplag@student.tudelft.nl</a></p>
+            <p>Peter van den Berg - <a href= "mailto:p.j.l.vandenberg@student.tudelft.nl">p.j.l.vandenberg@student.tudelft.nl</a></p>
+        </div>
+    </body>
+</html>
