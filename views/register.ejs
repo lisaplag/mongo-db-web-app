@@ -1,9 +1,25 @@
-<div class="row mt-5">
-    <div class="col-md-6 m-auto">
-      <div class="card card-body">
-        <h1 class="text-center mb-3">
-          <i class="fas fa-user-plus"></i> Register
-        </h1>
+<!-- views/users.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>TUtube</title>
+</head>
+    <body>
+        <header>
+            TUtube         
+            <ul class="topnav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a class="active" href="">Register</a></li>
+                <li style="float:right"><a href="/help">Help</a></li>
+            </ul>
+        </header>
+        <h1>Register here!</h1>
         <form action="/registeruser" method="POST">
           <div class="form-group">
             <label for="firstname">First Name</label>
@@ -14,6 +30,7 @@
               class="form-control"
               placeholder="Enter First Name"
               value="<%= typeof firstname != 'undefined' ? firstname : '' %>"
+              required
             />
           </div>
           <div class="form-group">
@@ -25,6 +42,7 @@
               class="form-control"
               placeholder="Enter Last Name"
               value="<%= typeof lastname != 'undefined' ? lastname : '' %>"
+              required
             />
           <div class="form-group">
             <label for="username">Username</label>
@@ -35,6 +53,7 @@
               class="form-control"
               placeholder="Enter Username"
               value="<%= typeof username != 'undefined' ? username : '' %>"
+              required
             />
           </div>
           <div class="form-group">
@@ -46,6 +65,7 @@
               class="form-control"
               placeholder="Enter Email"
               value="<%= typeof email != 'undefined' ? email : '' %>"
+              required
             />
           </div>
           <div class="form-group">
@@ -57,6 +77,7 @@
               class="form-control"
               placeholder="Create Password"
               value="<%= typeof password != 'undefined' ? password : '' %>"
+              required
             />
           </div>
           <div class="form-group">
@@ -68,6 +89,7 @@
               class="form-control"
               placeholder="Confirm Password"
               value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+              required
             />
           </div>
           <button type="submit" class="btn btn-primary btn-block">
@@ -75,6 +97,12 @@
           </button>
         </form>
         <p class="lead mt-4">Have An Account? <a href="/login">Login</a></p>
-      </div>
-    </div>
-  </div>
+    </body>
+</html>
+
+
+
+
+
+
+      

@@ -26,7 +26,7 @@ router.get('/register', function(req, res) {
 });
 
 /* POST register page. */
-router.post('/registeruser', function (req, res) {
+router.post('/register', function (req, res) {
 
     // Set our internal DB variable
     var db = req.db;
@@ -60,14 +60,10 @@ router.post('/registeruser', function (req, res) {
     });
 });
   
-  /* GET login page. */
-  router.get('/login', function(req, res) {
-    res.render('login', { title: 'Express' });
-    console.log('A User connected to the login page.');
-});
+
 
 /* GET login page. */
-router.get('/userlogin', function (req, res) {
+router.get('/login', function (req, res) {
 
     // Set our internal DB variable
     var db = req.db;
