@@ -20,12 +20,61 @@
             </ul>
         </header>
 
-        <h1>Welcome <%= userlist[i].firstname%>!</h1>
-        <form action="/url-where-we-want-to-submit-form-data">
-            <input type="text" placeholder="Search">
-            <button type="submit">Go!</button>
-          </form>
-          
-          <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-    </body>
+        <!-- Your custom JS -->
+        <script src="./javascripts/search.js"></script>
+
+        <h1>Welcome!</h1>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for videos">
+
+        <ul id="myUL">
+            <li><a href="https://www.youtube.com/watch?v=0ik6X4DJKCc">
+                <img src="./images/javascript1.jpg">
+                <div id="caption">JavaScript DOM Crash Course</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=yfoY53QXEnI">
+                <img src="./images/css.jpg">
+                <div id="caption">CSS Crash Course For Absolute Beginners</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=W6NZfCO5SIk">
+                <img src="./images/javascript2.jpg">
+                <div id="caption">JavaScript Tutorial for Beginners | Mosh</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=RLtyhwFtXQA">
+                <img src="./images/nodejs.jpg">
+                <div id="caption">Learn Node.js - Full Tutorial for Beginners</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=pQN-pnXPaVg">
+                <img src="./images/html.jpg">
+                <div id="caption">HTML Full Course - Build a Website Tutorial</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=ZS_kXvOeQ5Y">
+                <img src="./images/nosql.jpg">
+                <div id="caption">SQL vs NoSQL or MySQL vs MongoDB</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=bKjH8WhSu_E">
+                <img src="./images/mongodb.jpg">
+                <div id="caption">MongoDB in 18 Minutes - Intro to MongoDB</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=hMxGhHNOkCU">
+                <img src="./images/jquery.jpg">
+                <div id="caption">jQuery Tutorial #1 - jQuery Tutorial for Beginners</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=gnsO8-xJ8rs">
+                <img src="./images/express.jpg">
+                <div id="caption">ExpressJS Crash Course</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=HXV3zeQKqGY&t=3251s">
+                <img src="./images/sql.jpg">
+                <div id="caption">SQL - Full course for beginners</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=UnTQVlqmDQ0">
+                <img src="./images/webdev.jpg">
+                <div id="caption">Web Development In 2019 - A Practical Guide</div>
+            </a></li>
+            <li><a href="https://www.youtube.com/watch?v=eesqK59rhGA">
+                <img src="./images/http.jpg">
+                <div id="caption">The Http and the Web | Http Explained</div>
+            </a></li>
+        </ul>
 </html>
