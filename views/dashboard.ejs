@@ -24,7 +24,11 @@
         <!-- Your custom JS -->
         <script src="./javascripts/search.js"></script>
 
-        <h1>Welcome!</h1>
+        <% if(name != null) { %>
+            <h1>Welcome <%= name.firstname %>!</h1>
+        <% } else { %>
+            <h1>Welcome!</h1>
+        <% } %>
         <div class="container">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for videos">
 

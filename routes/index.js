@@ -101,7 +101,7 @@ router.post('/login', function (req, res) {
     // Submit to the DB
     collection.findOne({ "username": username, "password": inputpassword }).then(function (err, password) {
         if (err) {
-            return res.redirect("dashboard");
+            return res.render("dashboard", {"name" : err});
         }
         else {
             return res.redirect("login#failed")

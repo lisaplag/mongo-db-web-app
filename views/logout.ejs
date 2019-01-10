@@ -1,4 +1,4 @@
-<!-- views/users.ejs -->
+<!-- views/index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,40 +13,22 @@
         <header>
             TUtube         
             <ul class="topnav">
-                <li><a href="/">Home</a></li>
-                <li><a class="active" href="">Login</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/help">Help</a></li>
-            </ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/help">Help</a></li>
+                </ul>
         </header>
-        <h1>Log in here!</h1>
+
+        <h1>Thank you for using TUtube!</h1>
+        
         <div class="container">
-        <form action="/login" method="POST">
-            <div class="form-group">
-                    <input
-                      type="username"
-                      id="username"
-                      name="username"
-                      class="form-control"
-                      placeholder="Enter Username"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="password"
-                      id="password"
-                      name="password"
-                      class="form-control"
-                      placeholder="Enter Password"
-                      required 
-                    />
-                  </div>          
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
-          </form>
-          <p>No Account? <a href="/register">Register</a></p>
+            <p>Login again?</p>
+            <ul>
+                <li><a href="/login">Yes, login!</a></li>
+                <li><a href="/register">No, register!</a></li>
+            </ul>
         </div>
     </body>
 </html>
-
