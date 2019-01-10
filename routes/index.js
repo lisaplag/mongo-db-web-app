@@ -92,7 +92,12 @@ router.post('/login', function (req, res) {
     var collection = db.get('usercollection');
 
     // Submit to the DB
-    var password = collection.findOne({ "username": username }).password
+    var password = collection.findOne({ "username": username }).then(function (err, password) {
+        if (err) {
+            return console.log(err);
+        }
+        return password;
+    })
  
     console.log(password)
     console.log(inputpassword)
