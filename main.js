@@ -11,6 +11,14 @@ const express = require('express');
 const path = require('path');
 const routes = require('./routes');
 
+var createError = require('http-errors');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/group-02');
+
 // Initialize app
 const app = express();
 
