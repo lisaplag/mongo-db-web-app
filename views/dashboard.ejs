@@ -14,19 +14,18 @@
             TUtube         
             <ul class="topnav">
                 <li><a class="active" href="">Home</a></li>
-                <li><a href="userlist">Users</a></li>
-                <li><a href="dashboard">My Playlists</a></li>
-                <li><a href="#contact">Help</a></li>
+                <li><a href="">Playlists</a></li>
+                <li><a href="/help">Help</a></li>
                 <li style="float:right"><a href="#logout">Logout</a></li>
             </ul>
         </header>
-        <h1>Welcome to TUtube!</h1>
-        <!-- Your custom JS -->
-        <script src="./javascripts/index.js"></script>
+
+        <h1>Welcome <%= userlist[i].firstname%>!</h1>
         <form action="/url-where-we-want-to-submit-form-data">
             <input type="text" placeholder="Search">
             <button type="submit">Go!</button>
           </form>
+          
           <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
     </body>
 </html>

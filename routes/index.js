@@ -94,10 +94,10 @@ router.get('/login', function (req, res) {
 
 });
   
-  /* GET home page of a specific user. */
-  router.get('/dashboard', function(req, res) {
-    res.render('dashboard', { title: 'Express' });
-    console.log('A User connected to his personal dashboard.');
-  });
+/* GET home page of a specific user. */
+router.get('/dashboard', function(req, res) {
+res.render('dashboard', { title: 'Express' });
+console.log('A User connected to his personal dashboard.');
+});
 
 module.exports = router;
