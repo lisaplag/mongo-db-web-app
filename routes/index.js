@@ -3,15 +3,22 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('index', { title: 'Express' });
+    res.render('index', { title: 'Home' });
     console.log('A User connected to the home page.');
 });
 
 
-/* GET sample search page. */
-router.get('/search', function(req, res) {
-    res.render('search', { title: 'Express' });
-    console.log('A User connected to the home page.');
+/* GET contact page. */
+router.get('/contact', function (req, res) {
+    res.render('contact', { title: 'Contact' });
+    console.log('A User connected to the contact page.');
+});
+
+
+/* GET help page. */
+router.get('/help', function(req, res) {
+    res.render('help', { title: 'Help' });
+    console.log('A User connected to the help page.');
 });
 
 
@@ -29,7 +36,7 @@ router.get('/userlist', function(req, res) {
 
 /* GET register page. */
 router.get('/register', function(req, res) {
-    res.render('register', { title: 'Express' });
+    res.render('register', { title: 'Register' });
     console.log('A User connected to the register page.');
 });
 
@@ -70,7 +77,7 @@ router.post('/register', function (req, res) {
 
 /* GET login page. */
 router.get('/login', function (req, res) {
-    res.render('login', { title: 'Express' });
+    res.render('login', { title: 'Login' });
     console.log('A User connected to the login page.');
 });
 
@@ -104,13 +111,14 @@ router.post('/login', function (req, res) {
   
   /* GET home page of a specific user. */
   router.get('/dashboard', function(req, res) {
-    res.render('dashboard', { title: 'Express' });
+    res.render('dashboard', { title: 'Dashboard' });
     console.log('A User connected to his personal dashboard.');
 });
 
-router.get('/contact', function (req, res) {
-    res.render('contact', { title: 'Contact' });
-    console.log('A User connected to the contact page.');
+/* GET logout page. */
+router.get('/logout', function (req, res) {
+    res.render('logout', { title: 'Logged Out' });
+    console.log('A User logged out.');
 });
 
 module.exports = router;
