@@ -20,6 +20,10 @@ input {
   padding-left: 30px;
 }
 
+.container {
+  padding-left: 30px;
+}
+
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -91,7 +95,7 @@ input {
   float: left;
   width: 300px;
   line-height: 300px;
-  padding: 15px;
+  padding: 10px;
   display: block; /* Make it into a block element to fill the whole list */
 }
 
