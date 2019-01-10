@@ -7,6 +7,14 @@ router.get('/', function(req, res) {
     console.log('A User connected to the home page.');
 });
 
+
+/* GET sample search page. */
+router.get('/search', function(req, res) {
+    res.render('search', { title: 'Express' });
+    console.log('A User connected to the home page.');
+});
+
+
 /* GET Userlist page. */
 router.get('/userlist', function(req, res) {
     var db = req.db;
