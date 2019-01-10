@@ -77,21 +77,23 @@ router.get('/userlogin', function (req, res) {
     //var lastname = req.body.lastname;
     var username = req.body.username;
     //var email = req.body.email;
-    var password = req.body.password
+    var inputpassword = req.body.password
 
     // Set our collection
     var collection = db.get('usercollection');
 
     // Submit to the DB
-    var inputpassword = collection.find({ "username": username }, { "password": 1, "_id": 0 });
-    if (inputpassword = null) {
+    var password = collection.find({ "username": username }, { "password": 1, "_id": 0 });
+    console.log("password:");
+    console.log(password);
+    if (password = null) {
         res.send("The username is not in our database")
     }
     else if (inputpassword != password) {
         res.send("Incorrect Password")
     }
     else {
-        res.send("Correct User")
+        res.redirect("dashboard");
     }
 
 });
