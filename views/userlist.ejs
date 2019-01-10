@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h1>User List</h1>
+      <% if(userlist.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Surname</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<userlist.length;i++) { %>
+            <tr>
+              <td><a href="/login"><%= userlist[i].username%></a></td>
+              <td><%= userlist[i].firstname%></td>
+              <td><%= userlist[i].lastname%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No users found.</div>
+      <% } %>
+    </div>
+    <h4><a href="/register">Create new user</a></h3>
+  </body>
+</html>
