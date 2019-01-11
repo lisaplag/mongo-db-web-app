@@ -1,2 +1,2 @@
-# Group 02
+# TUtube
 A fake version of YouTube, created by students of TU Delft.
